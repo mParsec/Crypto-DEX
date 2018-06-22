@@ -8,7 +8,7 @@ const SPDY = require('libp2p-spdy')
 const SECIO = require('libp2p-secio')
 
 const Railing = require('libp2p-railing')
-const libp2p = require('libp2p')
+const libp2p = require('../../../..')
 
 // Find this list at: https://github.com/ipfs/js-ipfs/blob/master/src/core/runtime/config-browser.json
 const bootstrapers = [
@@ -40,7 +40,7 @@ class Node extends libp2p {
           Mplex,
           SPDY
         ],
-        crypto: [SECIO]
+        crypto: []
       },
       discovery: [
         wstar.discovery,
